@@ -3,7 +3,10 @@ import requests
 
 st.set_page_config(page_title="Car Price Prediction", page_icon="🚗", layout="centered")
 
-API_URL = "http://127.0.0.1:8000/predict"  # local FastAPI server
+API_URL = (
+    "https://car-price-api-jog8.onrender.com/predict"
+    or "http://127.0.0.1:8000/predict"
+)  # change if your endpoint differs
 
 st.title("🚗 Car Price Prediction")
 st.caption(
